@@ -24,19 +24,19 @@ The design aims to provide a low-cost and reproducible motion platform with prac
 The repository is organized into several functional domains:
 
 - Mechanical design: CAD and manufacturing files in thiet_ke_co_khi/
-- Electronics: PCB and schematics in electronics/
-- Firmware: embedded C++ controller in firmware/MotionControllerRP/
-- Python API: device communication and helper scripts in software/PythonAPI/
-- Documentation: build notes, setup guidance, and BOM in documentation/
+- Electronics: PCB and schematics in dien_tu/
+- Firmware: embedded C++ controller in phan_mem_nhung/bo_dieu_khien_chuyen_dong_rp/
+- Python API: device communication and helper scripts in phan_mem/api_python/
+- Documentation: build notes, setup guidance, and BOM in tai_lieu/
 
 ### Repository structure
 
 - thiet_ke_co_khi/ - CAD models, assemblies, and mechanical parts
-- electronics/ - KiCad PCB schematics and board files
-- firmware/MotionControllerRP/ - firmware project and embedded source code
-- firmware/MotionControllerRP/src/ - C++ firmware implementation
-- software/PythonAPI/ - Python API, utilities, and usage examples
-- documentation/ - technical documentation, setup references, and BOM
+- dien_tu/ - KiCad PCB schematics and board files
+- phan_mem_nhung/bo_dieu_khien_chuyen_dong_rp/ - firmware project and embedded source code
+- phan_mem_nhung/bo_dieu_khien_chuyen_dong_rp/src/ - C++ firmware implementation
+- phan_mem/api_python/ - Python API, utilities, and usage examples
+- tai_lieu/ - technical documentation, setup references, and BOM
 
 ### Mechanical design
 
@@ -44,7 +44,7 @@ The mechanical platform uses a parallel geometry to achieve compact motion with 
 
 ### Electronics design
 
-The electronics layer includes the control board and related hardware configuration. The system relies on stepper drives, encoder interfaces, logic/control circuitry, and power distribution arranged to support the motion controller and its real-time feedback loops. These design files are located under electronics/ and provide the hardware reference for the embedded controller.
+The electronics layer includes the control board and related hardware configuration. The system relies on stepper drives, encoder interfaces, logic/control circuitry, and power distribution arranged to support the motion controller and its real-time feedback loops. These design files are located under dien_tu/ and provide the hardware reference for the embedded controller.
 
 ### Firmware architecture
 
@@ -60,12 +60,12 @@ Core firmware responsibilities:
 
 Main firmware components:
 
-- firmware/MotionControllerRP/src/main.cpp - startup and system initialization
-- firmware/MotionControllerRP/src/robot.cpp - coordinated device behavior
-- firmware/MotionControllerRP/src/motion_control/ - path planning and movement logic
-- firmware/MotionControllerRP/src/servo_control/ - closed-loop control loops
-- firmware/MotionControllerRP/src/kinematic_models/ - geometry and kinematic calculations
-- firmware/MotionControllerRP/src/hw_config.h - hardware configuration such as pin map and motor settings
+- phan_mem_nhung/bo_dieu_khien_chuyen_dong_rp/src/main.cpp - startup and system initialization
+- phan_mem_nhung/bo_dieu_khien_chuyen_dong_rp/src/robot.cpp - coordinated device behavior
+- phan_mem_nhung/bo_dieu_khien_chuyen_dong_rp/src/dieu_khien_chuyen_dong/ - path planning and movement logic
+- phan_mem_nhung/bo_dieu_khien_chuyen_dong_rp/src/dieu_khien_servo/ - closed-loop control loops
+- phan_mem_nhung/bo_dieu_khien_chuyen_dong_rp/src/mo_hinh_dong_hoc/ - geometry and kinematic calculations
+- phan_mem_nhung/bo_dieu_khien_chuyen_dong_rp/src/hw_config.h - hardware configuration such as pin map and motor settings
 
 ### Control and communication model
 
@@ -86,9 +86,9 @@ The Python layer wraps the serial connection and exposes a simplified interface 
 
 Relevant Python files:
 
-- software/PythonAPI/tessera_api.py
-- software/PythonAPI/vi_du_su_dung.py
-- software/PythonAPI/ve_bieu_do_hieu_chuan.py
+- phan_mem/api_python/tessera_api.py
+- phan_mem/api_python/vi_du_su_dung.py
+- phan_mem/api_python/ve_bieu_do_hieu_chuan.py
 
 The API generally supports:
 
@@ -100,9 +100,9 @@ The API generally supports:
 
 ### Quick start
 
-1. Review the mechanical and electrical documentation in documentation/.
+1. Review the mechanical and electrical documentation in tai_lieu/.
 2. Build the hardware according to the project instructions.
-3. Adjust the hardware configuration in firmware/MotionControllerRP/src/hw_config.h.
+3. Adjust the hardware configuration in phan_mem_nhung/bo_dieu_khien_chuyen_dong_rp/src/hw_config.h.
 4. Flash the firmware using PlatformIO.
 5. Connect the device over serial.
 6. Use the Python API or a terminal client to home the platform and begin motion testing.
@@ -110,7 +110,7 @@ The API generally supports:
 ### Example usage
 
 ```python
-from software.PythonAPI.tessera_api import TesseraInterface
+from phan_mem.api_python.tessera_api import TesseraInterface
 
 api = TesseraInterface(show_communication=True, show_log_messages=True)
 api.connect('/dev/ttyACM0')
@@ -151,19 +151,19 @@ Tessera là một nền tảng chuyển động XYZ kiểu compact, mã nguồn 
 Kho mã nguồn được tổ chức theo các tầng chức năng chính:
 
 - Thiết kế cơ khí: mô hình CAD và file gia công trong thiet_ke_co_khi/
-- Điện tử: bo mạch và sơ đồ trong electronics/
-- Firmware: bộ điều khiển nhúng C++ trong firmware/MotionControllerRP/
-- Python API: giao tiếp thiết bị và script hỗ trợ trong software/PythonAPI/
-- Tài liệu: hướng dẫn xây dựng, thiết lập và BOM trong documentation/
+- Điện tử: bo mạch và sơ đồ trong dien_tu/
+- Firmware: bộ điều khiển nhúng C++ trong phan_mem_nhung/bo_dieu_khien_chuyen_dong_rp/
+- Python API: giao tiếp thiết bị và script hỗ trợ trong phan_mem/api_python/
+- Tài liệu: hướng dẫn xây dựng, thiết lập và BOM trong tai_lieu/
 
 ### Cấu trúc thư mục
 
 - thiet_ke_co_khi/ - mô hình CAD, bộ lắp ráp và linh kiện cơ khí
-- electronics/ - file sơ đồ PCB KiCad và board layout
-- firmware/MotionControllerRP/ - mã nguồn firmware và dự án PlatformIO
-- firmware/MotionControllerRP/src/ - phần triển khai firmware C++
-- software/PythonAPI/ - API Python, tiện ích và ví dụ sử dụng
-- documentation/ - tài liệu kỹ thuật, hướng dẫn lắp đặt và danh mục vật tư
+- dien_tu/ - file sơ đồ PCB KiCad và board layout
+- phan_mem_nhung/bo_dieu_khien_chuyen_dong_rp/ - mã nguồn firmware và dự án PlatformIO
+- phan_mem_nhung/bo_dieu_khien_chuyen_dong_rp/src/ - phần triển khai firmware C++
+- phan_mem/api_python/ - API Python, tiện ích và ví dụ sử dụng
+- tai_lieu/ - tài liệu kỹ thuật, hướng dẫn lắp đặt và danh mục vật tư
 
 ### Thiết kế cơ khí
 
@@ -171,7 +171,7 @@ Cấu trúc cơ khí sử dụng hình học song song để đạt được chu
 
 ### Thiết kế điện tử
 
-Lớp điện tử bao gồm bo mạch điều khiển và cấu hình phần cứng tương ứng. Hệ thống dùng động cơ bước, giao diện mã hóa, mạch điều khiển logic và phân phối nguồn để hỗ trợ bộ điều khiển chuyển động và vòng phản hồi thời gian thực. Các file này nằm trong electronics/ và là tài liệu tham khảo cho phần firmware.
+Lớp điện tử bao gồm bo mạch điều khiển và cấu hình phần cứng tương ứng. Hệ thống dùng động cơ bước, giao diện mã hóa, mạch điều khiển logic và phân phối nguồn để hỗ trợ bộ điều khiển chuyển động và vòng phản hồi thời gian thực. Các file này nằm trong dien_tu/ và là tài liệu tham khảo cho phần firmware.
 
 ### Kiến trúc firmware
 
@@ -187,12 +187,12 @@ Các trách nhiệm chính của firmware:
 
 Những thành phần quan trọng:
 
-- firmware/MotionControllerRP/src/main.cpp - khởi động và khởi tạo hệ thống
-- firmware/MotionControllerRP/src/robot.cpp - hành vi tổng hợp của thiết bị
-- firmware/MotionControllerRP/src/motion_control/ - logic lập kế hoạch đường đi
-- firmware/MotionControllerRP/src/servo_control/ - vòng lặp điều khiển đóng
-- firmware/MotionControllerRP/src/kinematic_models/ - tính toán hình học và động học
-- firmware/MotionControllerRP/src/hw_config.h - cấu hình phần cứng như chân GPIO và cài đặt motor
+- phan_mem_nhung/bo_dieu_khien_chuyen_dong_rp/src/main.cpp - khởi động và khởi tạo hệ thống
+- phan_mem_nhung/bo_dieu_khien_chuyen_dong_rp/src/robot.cpp - hành vi tổng hợp của thiết bị
+- phan_mem_nhung/bo_dieu_khien_chuyen_dong_rp/src/dieu_khien_chuyen_dong/ - logic lập kế hoạch đường đi
+- phan_mem_nhung/bo_dieu_khien_chuyen_dong_rp/src/dieu_khien_servo/ - vòng lặp điều khiển đóng
+- phan_mem_nhung/bo_dieu_khien_chuyen_dong_rp/src/mo_hinh_dong_hoc/ - tính toán hình học và động học
+- phan_mem_nhung/bo_dieu_khien_chuyen_dong_rp/src/hw_config.h - cấu hình phần cứng như chân GPIO và cài đặt motor
 
 ### Mô hình điều khiển và truyền thông
 
@@ -213,9 +213,9 @@ Lớp Python đóng gói kết nối serial và cung cấp giao diện đơn gi�
 
 Các file Python quan trọng:
 
-- software/PythonAPI/tessera_api.py
-- software/PythonAPI/vi_du_su_dung.py
-- software/PythonAPI/ve_bieu_do_hieu_chuan.py
+- phan_mem/api_python/tessera_api.py
+- phan_mem/api_python/vi_du_su_dung.py
+- phan_mem/api_python/ve_bieu_do_hieu_chuan.py
 
 API thường hỗ trợ:
 
@@ -227,9 +227,9 @@ API thường hỗ trợ:
 
 ### Bắt đầu nhanh
 
-1. Đọc tài liệu cơ khí và điện tử trong documentation/
+1. Đọc tài liệu cơ khí và điện tử trong tai_lieu/
 2. Lắp ráp phần cứng theo hướng dẫn của dự án
-3. Điều chỉnh cấu hình phần cứng trong firmware/MotionControllerRP/src/hw_config.h
+3. Điều chỉnh cấu hình phần cứng trong phan_mem_nhung/bo_dieu_khien_chuyen_dong_rp/src/hw_config.h
 4. Nạp firmware bằng PlatformIO
 5. Kết nối thiết bị qua serial
 6. Dùng Python API hoặc client terminal để homing trục và bắt đầu kiểm tra chuyển động
@@ -237,7 +237,7 @@ API thường hỗ trợ:
 ### Ví dụ sử dụng
 
 ```python
-from software.PythonAPI.tessera_api import TesseraInterface
+from phan_mem.api_python.tessera_api import TesseraInterface
 
 api = TesseraInterface(show_communication=True, show_log_messages=True)
 api.connect('/dev/ttyACM0')

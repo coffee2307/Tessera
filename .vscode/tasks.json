@@ -10,7 +10,7 @@
                 "-ExecutionPolicy",
                 "Bypass",
                 "-File",
-                "${workspaceFolder}/tools/freecad/run_freecad.ps1"
+                "${workspaceFolder}/cong_cu/freecad/run_freecad.ps1"
             ],
             "problemMatcher": []
         }
