@@ -23,7 +23,7 @@ The design aims to provide a low-cost and reproducible motion platform with prac
 
 The repository is organized into several functional domains:
 
-- Mechanical design: CAD and manufacturing files in construction/
+- Mechanical design: CAD and manufacturing files in thiet_ke_co_khi/
 - Electronics: PCB and schematics in electronics/
 - Firmware: embedded C++ controller in firmware/MotionControllerRP/
 - Python API: device communication and helper scripts in software/PythonAPI/
@@ -31,7 +31,7 @@ The repository is organized into several functional domains:
 
 ### Repository structure
 
-- construction/ - CAD models, assemblies, and mechanical parts
+- thiet_ke_co_khi/ - CAD models, assemblies, and mechanical parts
 - electronics/ - KiCad PCB schematics and board files
 - firmware/MotionControllerRP/ - firmware project and embedded source code
 - firmware/MotionControllerRP/src/ - C++ firmware implementation
@@ -150,7 +150,7 @@ Tessera là một nền tảng chuyển động XYZ kiểu compact, mã nguồn 
 
 Kho mã nguồn được tổ chức theo các tầng chức năng chính:
 
-- Thiết kế cơ khí: mô hình CAD và file gia công trong construction/
+- Thiết kế cơ khí: mô hình CAD và file gia công trong thiet_ke_co_khi/
 - Điện tử: bo mạch và sơ đồ trong electronics/
 - Firmware: bộ điều khiển nhúng C++ trong firmware/MotionControllerRP/
 - Python API: giao tiếp thiết bị và script hỗ trợ trong software/PythonAPI/
@@ -158,7 +158,7 @@ Kho mã nguồn được tổ chức theo các tầng chức năng chính:
 
 ### Cấu trúc thư mục
 
-- construction/ - mô hình CAD, bộ lắp ráp và linh kiện cơ khí
+- thiet_ke_co_khi/ - mô hình CAD, bộ lắp ráp và linh kiện cơ khí
 - electronics/ - file sơ đồ PCB KiCad và board layout
 - firmware/MotionControllerRP/ - mã nguồn firmware và dự án PlatformIO
 - firmware/MotionControllerRP/src/ - phần triển khai firmware C++

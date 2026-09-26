@@ -17,9 +17,9 @@ exec(compile(open(r"F:\Tessera\tools\freecad\edit_tessera.py", "rb").read(), r"F
 
 ## Tệp
 
-- Tệp đầu vào: `construction/micro_manipulator/Assembly_MicroManipulator.FCStd`
-- Bản sao lưu: `construction/micro_manipulator/Assembly_MicroManipulator.backup.FCStd`
-- Tệp đầu ra: `construction/micro_manipulator/Assembly_MicroManipulator_edited.FCStd`
+- Tệp đầu vào: `thiet_ke_co_khi/bo_thao_tac_vi_mo/Assembly_MicroManipulator.FCStd`
+- Bản sao lưu: `thiet_ke_co_khi/bo_thao_tac_vi_mo/Assembly_MicroManipulator.backup.FCStd`
+- Tệp đầu ra: `thiet_ke_co_khi/bo_thao_tac_vi_mo/Assembly_MicroManipulator_edited.FCStd`
 
 Bản sao lưu chỉ được tạo nếu chưa tồn tại. Tệp đầu vào không bị ghi đè.
 
