@@ -2,8 +2,8 @@
 
 This folder contains a lightweight Python interface for the Tessera serial protocol, plus two small example scripts:
 
-- `usage_example.py`: homes the device, performs a simple move, and prints device state information.
-- `calibration_plotter.py`: runs joint calibration for the first three actuators and plots the returned data.
+- `vi_du_su_dung.py`: homes the device, performs a simple move, and prints device state information.
+- `ve_bieu_do_hieu_chuan.py`: runs joint calibration for the first three actuators and plots the returned data.
 
 ## Requirements
 
@@ -36,14 +36,14 @@ If `--port` is not provided, the scripts try to choose a port automatically:
 From this folder:
 
 ```bash
-python usage_example.py --list-ports
-python usage_example.py --port /dev/ttyACM0
+python vi_du_su_dung.py --list-ports
+python vi_du_su_dung.py --port /dev/ttyACM0
 ```
 
 On Windows, a typical command looks like:
 
 ```bash
-python usage_example.py --port COM3
+python vi_du_su_dung.py --port COM3
 ```
 
 ## Running The Calibration Plotter
@@ -51,8 +51,8 @@ python usage_example.py --port COM3
 From this folder:
 
 ```bash
-python calibration_plotter.py --list-ports
-python calibration_plotter.py --port /dev/ttyACM0
+python ve_bieu_do_hieu_chuan.py --list-ports
+python ve_bieu_do_hieu_chuan.py --port /dev/ttyACM0
 ```
 
 The calibration script opens a matplotlib window with the measured calibration curves.
@@ -62,7 +62,7 @@ The calibration script opens a matplotlib window with the measured calibration c
 If you prefer to run the scripts from the repository root, use:
 
 ```bash
-python software/PythonAPI/usage_example.py --port /dev/ttyACM0
-python software/PythonAPI/calibration_plotter.py --port /dev/ttyACM0
+python software/PythonAPI/vi_du_su_dung.py --port /dev/ttyACM0
+python software/PythonAPI/ve_bieu_do_hieu_chuan.py --port /dev/ttyACM0
 ```
 

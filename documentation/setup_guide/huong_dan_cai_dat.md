@@ -8,7 +8,7 @@ This guide walks you through the setup of your new **Tessera** device.
    This pin is required for proper homing of the device.
 
     <div style="display: flex;">
-        <img src="mechanical_limit_pin.jpg" alt="Mechanical Limit Pin" width="40%">
+        <img src="chot_gioi_han_co_khi.jpg" alt="Mechanical Limit Pin" width="40%">
     </div>
 
 
@@ -20,7 +20,7 @@ This guide walks you through the setup of your new **Tessera** device.
    If it moves in the opposite direction, rewire the motor to reverse its direction.
 
    <div style="display: flex;">
-       <img src="homing_direction.jpg" alt="Mechanical Limit Pin" width="40%">
+    <img src="chieu_di_homing.jpg" alt="Mechanical Limit Pin" width="40%">
    </div>
 
 
@@ -29,7 +29,7 @@ This guide walks you through the setup of your new **Tessera** device.
 You can use the calibration plotter to check if your encoders are working as expected.
 On the left you see a good calibration on the right a bad calibration.
 
-| <img src="good_calibration.jpg"> | <img src="bad_calibration.jpg"> |
+| <img src="hieu_chuan_tot.jpg"> | <img src="hieu_chuan_chua_dat.jpg"> |
 :--:|:--:
 | **Good calibration** | **Bad calibration** |
 

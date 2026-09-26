@@ -87,8 +87,8 @@ The Python layer wraps the serial connection and exposes a simplified interface 
 Relevant Python files:
 
 - software/PythonAPI/tessera_api.py
-- software/PythonAPI/usage_example.py
-- software/PythonAPI/calibration_plotter.py
+- software/PythonAPI/vi_du_su_dung.py
+- software/PythonAPI/ve_bieu_do_hieu_chuan.py
 
 The API generally supports:
 
@@ -214,8 +214,8 @@ Lớp Python đóng gói kết nối serial và cung cấp giao diện đơn gi�
 Các file Python quan trọng:
 
 - software/PythonAPI/tessera_api.py
-- software/PythonAPI/usage_example.py
-- software/PythonAPI/calibration_plotter.py
+- software/PythonAPI/vi_du_su_dung.py
+- software/PythonAPI/ve_bieu_do_hieu_chuan.py
 
 API thường hỗ trợ:
 
